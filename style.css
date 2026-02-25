@@ -463,7 +463,117 @@ header .logo img {
         text-align: justify;
     }
 }
+.contactpg {
+    background-color: var(--clr-light);
+    padding: 10rem;
+    color: var(--clr-dark);
+}
 
+.contactpg .container {
+    padding: 0;
+}
+
+.contactpg__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+}
+
+.contactpg__info h6 {
+    margin-bottom: 3rem;
+}
+
+.contactpg__info h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.contactpg__info p {
+    margin-bottom: 4rem;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact-card {
+    max-width: 40rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: var(--clr-light);
+    padding: 1rem 1.2rem;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.contact-card__icon {
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    background-color: var(--clr-primary);
+    color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.contact-card__text p {
+    margin-bottom: 0.3rem;
+    
+}
+
+.contact-card__text h5 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.contactpg__form form {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contactpg__form input,
+.contactpg__form textarea {
+    width: 100%;
+    border: 1.5px solid var(--clr-dark);
+    border-radius: 1.5rem;
+    padding: 1rem 2rem;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-dark);
+    background-color: transparent;
+}
+
+.contactpg__form textarea {
+    min-height: 25rem;
+    resize: none;
+}
+
+.contactpg__form input::placeholder,
+.contactpg__form textarea::placeholder {
+    color: var(--clr-dark);
+}
+
+.contactpg__form .btn {
+    margin-top: 3rem;
+    width: fit-content;
+    font-size: 1.5rem;
+    padding: 1.5rem 3rem;
+}
 /*ASSETS*/
 .clickable__text {
     color: var(--clr-primary);
@@ -648,5 +758,41 @@ header .logo img {
     .footer__wrapper {
         justify-content: center;
         text-align: center;
+    }
+}
+@media (max-width: 520px) {
+    .contactpg {
+        padding: 3rem 1.2rem;
+    }
+
+    .contactpg__wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contactpg__info h6 {
+        font-size: 1.4rem;
+    }
+
+    .contactpg__info h1 {
+        font-size: 3rem;
+    }
+
+    .contact-card__text h5 {
+        font-size: 1.8rem;
+    }
+
+    .contact-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contactpg__form input,
+    .contactpg__form textarea {
+        font-size: 1.6rem;
+        border-radius: 1rem;
+    }
+
+    .contactpg__form .btn {
+        font-size: 1.6rem;
     }
 }
